@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Aviator & Win Real Money</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(#090909, #000000);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .aviator-logo {
+      width: 120px;
+      margin: 20px 0;
+    }
+
+    .cta {
+      background: #ff0033;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta:hover {
+      background: #e6002c;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .timer {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Aviator_Game_logo.png/600px-Aviator_Game_logo.png" alt="Aviator" class="aviator-logo" />
+
+    <h1>Play Aviator & Win Real Cash!</h1>
+    <p>Fast-paced multiplier game. Cash out before the plane flies away!</p>
+
+    <div class="timer" id="countdown">Redirecting in 5 seconds...</div>
+    <button class="cta" onclick="redirectNow()">Play Now</button>
+
+    <div class="note">
+      Safe & secure | 18+ only | Instant bonus on sign-up
+    </div>
+  </div>
+
+  <script>
+    const aviatorLink = "https://1xbet.com/?ref=YOUR_AFFILIATE_ID"; // Replace this with your referral link
+    let seconds = 5;
+    const timer = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      seconds--;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        redirectNow();
+      } else {
+        timer.innerText = `Redirecting in ${seconds} seconds...`;
+      }
+    }, 1000);
+
+    function redirectNow() {
+      window.location.href = aviatorLink;
+    }
+  </script>
+</body>
+</html>
